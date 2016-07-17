@@ -1,0 +1,41 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>gitでのwebページの作り方（例）</title>
+</head>
+
+<body>
+
+<h1>gitでのwebページの作り方（例）</h1>
+<h2>超絶単純簡単なgitを使った、ウェブサイト作りのフローチャートみたいな</h2>
+
+<p>他のページを見てリポジトリを作ってあってあるのが前提。</p>
+
+<hr>
+
+<ol>
+        <li>リモートのほうでworkブランチを作っておく。</li>
+	<li>[git pull]でリモートに落とす</li>
+	<li>[git branch -a]でさっき作ったリモートのworkがあるかチェック。</li>
+	<li>[git checkout work]でローカルにworkを作り入る。</li>
+	<li>[vi ファイル名.html]で新しくファイルを作成する。または、作ってあるそのファイルを開く。</li>
+	<li>[git status]で改変したファイルが赤文字で表示されればおｋ。</li>
+	<li>[git add ファイル名.html]でファイルをアドする。</li>
+	<li>[git commit -m "コメント"]でコミットする。</li>
+	<li>[git push]でリモートにあげる。</li>
+	<li>リモートでプルリクエストしてマージする。そして、リモートのworkブランチを削除する。</li>
+	<li>[git checkout master]でマスターブランチへ移る。</li>
+	<li>[git merge --no-ff work]でローカルのworkをマスターにマージする。</li>
+	<li>[git branch -d work]でローカルのworkブランチを削除する。</li>
+	<li>[git branch]でworkが消えたかチェックする。</li>
+</ol>
+
+<hr>
+
+<p>
+こんな感じでやっていく、なんかあったらpullしてみよう(´ω｀)ﾉｼ
+</p>
+
+</body>
+</html>
+
